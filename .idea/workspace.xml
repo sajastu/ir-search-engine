@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6539ac88-82b8-4be1-acd9-eb1cf1fa04bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inverted_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/inverted_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/lm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/lm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/retrieval_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/retrieval_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/query_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/index_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/index_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/parse_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/parse_utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +24,7 @@
     <SUITE FILE_PATH="coverage/irsearch_engine$query.coverage" NAME="query Coverage Results" MODIFIED="1553321386034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$index_utils.coverage" NAME="index_utils Coverage Results" MODIFIED="1550369206114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1550388268063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$build.coverage" NAME="build Coverage Results" MODIFIED="1555267024358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$build.coverage" NAME="build Coverage Results" MODIFIED="1555472209498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1625204878">
@@ -48,15 +44,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="139" />
-          <entry key="Perl" value="54" />
-          <entry key="Python" value="219" />
+          <entry key="Perl" value="55" />
+          <entry key="Python" value="220" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="250" />
-          <entry key="Python" value="25982" />
+          <entry key="PLAIN_TEXT" value="330" />
+          <entry key="Python" value="26050" />
         </counts>
       </usages-collector>
     </session>
@@ -67,19 +63,10 @@
         <entry file="file://$PROJECT_DIR$/models/retrieval_model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="427">
-              <caret line="149" column="44" lean-forward="true" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+              <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tmp/my-indexes-single/postings.pl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="45719" column="22" selection-start-line="45719" selection-start-column="14" selection-end-line="45719" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -99,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/index_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="150">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -108,11 +95,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inverted_index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="281" column="26" lean-forward="true" selection-start-line="281" selection-start-column="26" selection-end-line="281" selection-end-column="26" />
+            <state relative-caret-position="257">
+              <caret line="241" column="128" selection-start-line="241" selection-start-column="128" selection-end-line="241" selection-end-column="128" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/parse_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -202,7 +198,6 @@
         <option value="$PROJECT_DIR$/build.py" />
         <option value="$PROJECT_DIR$/query_reader.py" />
         <option value="$PROJECT_DIR$/entities/posting_item.py" />
-        <option value="$PROJECT_DIR$/utils/parse_utils.py" />
         <option value="$PROJECT_DIR$/entities/entity_utils.py" />
         <option value="$PROJECT_DIR$/retrieval_model.py" />
         <option value="$PROJECT_DIR$/query_handler.py" />
@@ -217,9 +212,10 @@
         <option value="$PROJECT_DIR$/query_expansion.py" />
         <option value="$PROJECT_DIR$/query_processor.py" />
         <option value="$PROJECT_DIR$/utils/index_utils.py" />
-        <option value="$PROJECT_DIR$/inverted_index.py" />
         <option value="$PROJECT_DIR$/models/retrieval_model.py" />
         <option value="$PROJECT_DIR$/models/lm.py" />
+        <option value="$PROJECT_DIR$/utils/parse_utils.py" />
+        <option value="$PROJECT_DIR$/inverted_index.py" />
       </list>
     </option>
   </component>
@@ -257,12 +253,6 @@
               <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
               <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-              <item name="my-indexes-single" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -441,6 +431,14 @@
       <option name="presentableId" value="Default" />
       <updated>1548572665993</updated>
     </task>
+    <task id="LOCAL-00001" summary="jaccard similarity measure added.&#10;--minor bug in index creation time">
+      <created>1555470965546</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555470965546</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -452,8 +450,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32465753" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.110958904" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42637363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41643837" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4260274" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -461,7 +459,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.11643836" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.13150685" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -480,6 +478,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="jaccard similarity measure added.&#10;--minor bug in index creation time" />
+    <option name="LAST_COMMIT_MESSAGE" value="jaccard similarity measure added.&#10;--minor bug in index creation time" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -490,12 +492,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>147</line>
+          <line>143</line>
           <option name="timeStamp" value="355" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>76</line>
+          <line>72</line>
           <option name="timeStamp" value="357" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -530,13 +532,63 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>278</line>
-          <option name="timeStamp" value="549" />
+          <line>270</line>
+          <option name="timeStamp" value="550" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/index_utils.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="551" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/utils/index_utils.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="552" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>283</line>
-          <option name="timeStamp" value="550" />
+          <line>263</line>
+          <option name="timeStamp" value="555" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="556" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>257</line>
+          <option name="timeStamp" value="557" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>260</line>
+          <option name="timeStamp" value="559" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>255</line>
+          <option name="timeStamp" value="560" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>262</line>
+          <option name="timeStamp" value="561" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>259</line>
+          <option name="timeStamp" value="562" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>254</line>
+          <option name="timeStamp" value="563" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>232</line>
+          <option name="timeStamp" value="564" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -559,47 +611,47 @@ postings_file.tell()</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>postinglist[term]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>[pi2.doc_num for pi2 in postinglist[term]]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pi.doc_num</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.term_doc_list[10000:20000]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>self.term_doc_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(postinglist)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>postinglist</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>len(docs_with_tokens)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>docs_with_tokens</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>hits</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.queries</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>docs_for_q</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>all_docs</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.all_retrieved_docs</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>q_obj.title</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>q_obj</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -777,23 +829,6 @@ postings_file.tell()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/parse_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/lm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
@@ -807,31 +842,48 @@ postings_file.tell()</expression-string>
     <entry file="file://$PROJECT_DIR$/models/retrieval_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
-          <caret line="149" column="44" lean-forward="true" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+          <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/query_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="55" column="28" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tmp/my-indexes-single/postings.pl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="45719" column="22" selection-start-line="45719" selection-start-column="14" selection-end-line="45719" selection-end-column="22" />
+        <state relative-caret-position="685080">
+          <caret line="45672" selection-start-line="45672" selection-end-line="45672" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/index_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="150">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/parse_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inverted_index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="281" column="26" lean-forward="true" selection-start-line="281" selection-start-column="26" selection-end-line="281" selection-end-column="26" />
+        <state relative-caret-position="257">
+          <caret line="241" column="128" selection-start-line="241" selection-start-column="128" selection-end-line="241" selection-end-column="128" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

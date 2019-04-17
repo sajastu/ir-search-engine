@@ -4,7 +4,7 @@ from utils.text_utils import pre_process
 from utils.tokenizer import Tokenizer
 
 
-def parse_document(document, type):
+def parse_document(document, type='single'):
     document = document.replace('\r', '').replace('\n','')
     doc_num = str(re.search('<DOCNO>(.*?)</DOCNO>', document).groups(1)).replace('(\'', '').replace('\',)','').strip()
     doc_body = str(re.search('<TEXT>(.*?)</TEXT>', document).groups(1))

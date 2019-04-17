@@ -6,14 +6,11 @@ from collections import deque
 
 from utils import index_utils as utils
 from entities.posting_item import PostingItem
-from utils.index_utils import write_doc_to_file
 from utils.parse_utils import parse_document
 
 
 class Index:
     def __init__(self, opt):
-        self.collection_length = 0
-        self.doc_total = 0
         self.opt = opt
         self.memory_cons = self.opt['memory']
         self.term_doc_list = set([])
@@ -220,7 +217,6 @@ class Index:
 
     def read_unlimited(self):
         data = []
-        docs_with_tokens={}
         flag = False
         j = 0
         for file in self.files:
@@ -229,29 +225,21 @@ class Index:
                 line = f.readline()
                 while line:
                     if line.startswith('<DOC>'):
-                        self.doc_total += 1
                         flag = True
                     if flag:
                         data.append(line)
                     if line.strip().endswith('</DOC>'):
                         flag = False
                         doc_num, tokens, token_positions, doc_len = parse_document(' '.join(data).replace('\n', ''),
-                                                                                   self.opt['type'])
-                        docs_with_tokens[doc_num] = tokens
-                        self.collection_length += len(tokens)
+                                                                          self.opt['type'])
                         data.clear()
-                        visited_tokens = []
                         for i, token in enumerate(tokens):
                             if len(token_positions) == 0:
-                                if token not in visited_tokens:
-                                    self.term_doc_list.add((token, PostingItem(doc_num, tokens.count(token), doc_length=doc_len)))
-                                    visited_tokens.append(token)
+                                self.term_doc_list.add((token, PostingItem(doc_num, tokens.count(token), doc_length=doc_len)))
                             if len(token_positions) > 0:
-                                if token not in visited_tokens:
-                                    self.term_doc_list.add((token, PostingItem(doc_num, tokens.count(token),
-                                                                               [token_positions[i] for i, x in
-                                                                                enumerate(tokens) if x == token], doc_len)))
-                                    visited_tokens.append(token)
+                                self.term_doc_list.add((token, PostingItem(doc_num, tokens.count(token),
+                                                                           [token_positions[i] for i, x in
+                                                                            enumerate(tokens) if x == token], doc_length=doc_len)))
 
                     line = f.readline()
 
@@ -265,25 +253,21 @@ class Index:
         for term, pi in self.term_doc_list:
             if term not in postinglist.keys():
                 if pi.positions is not None and len(pi.positions) > 0:
-                    postinglist[term] = [PostingItem(pi.doc_num, pi.freq, pi.positions, pi.doc_length)]
+                    postinglist[term] = [PostingItem(pi.doc_num, pi.freq, pi.positions)]
                 else:
                     postinglist[term] = [pi]
             else:
                 if pi.positions is not None and len(pi.positions) > 0:
-                    postinglist[term].append(PostingItem(pi.doc_num, pi.freq, pi.positions, pi.doc_length))
+                    postinglist[term].append(PostingItem(pi.doc_num, pi.freq, pi.positions))
                 else:
-                    if pi.doc_num in [pi2.doc_num for pi2 in postinglist[term]]:
-                        postinglist[term].append(pi)
+                    postinglist[term].append(pi)
 
         print('Writing the posting list')
-        write_doc_to_file(docs_with_tokens, 'dict')
+
         terms = {t: postinglist[t] for t in sorted(postinglist.keys())}
         for term in terms:
-            if term != '':
-                postinglist[term].sort(key=lambda x: x.doc_num, reverse=False)
-                utils.write_intermediate_index(block_dict, block_posting_filename, term,
-                                               postinglist[term], self.opt['type'])
+            postinglist[term].sort(key=lambda x: x.doc_num, reverse=False)
+            utils.write_intermediate_index(block_dict, block_posting_filename, term,
+                                           postinglist[term])
         block_posting_filename.close()
         block_dict.close()
-        print('Num of total docs: {}'.format(self.doc_total))
-        print('Coll length: {}'.format(self.collection_length))
