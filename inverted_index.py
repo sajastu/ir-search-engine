@@ -6,6 +6,7 @@ from collections import deque
 
 from utils import index_utils as utils
 from entities.posting_item import PostingItem
+from utils.index_utils import write_doc_to_file
 from utils.parse_utils import parse_document
 
 
@@ -219,6 +220,7 @@ class Index:
 
     def read_unlimited(self):
         data = []
+        docs_with_tokens={}
         flag = False
         j = 0
         for file in self.files:
@@ -235,6 +237,7 @@ class Index:
                         flag = False
                         doc_num, tokens, token_positions, doc_len = parse_document(' '.join(data).replace('\n', ''),
                                                                                    self.opt['type'])
+                        docs_with_tokens[doc_num] = tokens
                         self.collection_length += len(tokens)
                         data.clear()
                         visited_tokens = []
@@ -273,7 +276,7 @@ class Index:
                         postinglist[term].append(pi)
 
         print('Writing the posting list')
-
+        write_doc_to_file(docs_with_tokens, 'dict')
         terms = {t: postinglist[t] for t in sorted(postinglist.keys())}
         for term in terms:
             if term != '':

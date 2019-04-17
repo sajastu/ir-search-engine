@@ -1,4 +1,5 @@
 import json
+import pickle
 from collections import defaultdict
 
 from entities.query_item import Query
@@ -7,7 +8,7 @@ from utils.tokenizer import Tokenizer
 
 class RetrievalModel:
 
-    def __init__(self, queries, opt, static):
+    def __init__(self, queries, opt, static, expansion, sim='jaccard'):
         """
 
         :param queries: an array of Query objects
@@ -32,6 +33,11 @@ class RetrievalModel:
             self.positional_idx = self.load_positional_idx()
             # self.proximity_idx = self.load_proximity_idx()
             self.hits, self.all_retrieved_docs = self.get_hits_dynamically()
+
+        if expansion:
+            self.doc_tokens = self.load_doc_tokens()
+            self.sim = sim
+
 
     def get_hits_dynamically(self):
         hits = defaultdict(dict)
@@ -201,3 +207,6 @@ class RetrievalModel:
 
     def load_proximity_idx(self):
         pass
+
+    def load_doc_tokens(self):
+        return pickle.load( open('/tmp/dict', "rb"))

@@ -51,7 +51,9 @@ class QueryProcessor:
         write_results(results, self.opt['result_dir'])
 
     def query_expander(self):
-        pass
+        results = {}
+
+        results = LanguageModel(self.queries, self.opt).get_expanded_list()
 
 # if __name__ == '__main__':
 #     #static

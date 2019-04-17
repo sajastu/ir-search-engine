@@ -1,5 +1,6 @@
 import json
 import math
+import pickle
 
 from entities.posting_item import PostingItem
 
@@ -28,11 +29,11 @@ def write_intermediate_index(dictFile, postings_file, term, postings, type = Non
     dict_entity['idf'] = 1 + math.log(1768 / len(postings))
     dict_entity['tf_collection'] = tf_in_collection
 
-    if tf_in_collection > 2:
-        json.dump(postings_dict['documents'], postings_file)
-        postings_file.write('\n')
-        json.dump(dict_entity, dictFile)
-        dictFile.write('\n')
+    # if tf_in_collection > 2:
+    json.dump(postings_dict['documents'], postings_file)
+    postings_file.write('\n')
+    json.dump(dict_entity, dictFile)
+    dictFile.write('\n')
 
 
 # returns a tuple[ term, posting_file_pointer, [initial_blocks list] ], where initial_blocks list is decoded and in integer format
@@ -89,3 +90,8 @@ def merge_posting_lists(pl_1, pl_2):
         merged_pl.append(pl_2[j])
         j += 1
     return merged_pl
+
+def write_doc_to_file(dict, filename):
+    outfile = open('tmp/' + filename, 'wb')
+    pickle.dump(dict, outfile)
+    outfile.close()
