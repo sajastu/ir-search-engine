@@ -259,7 +259,7 @@ class Index:
             else:
                 if pi.positions is not None and len(pi.positions) > 0:
                     postinglist[term].append(PostingItem(pi.doc_num, pi.freq, pi.positions))
-                else:
+                elif pi.doc_num not in [pi2.doc_num for pi2 in postinglist[term]]:
                     postinglist[term].append(pi)
 
         print('Writing the posting list')

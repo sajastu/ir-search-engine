@@ -1,3 +1,5 @@
+import time
+
 from entities.query_item import Query
 from models.bm25 import BM25
 from models.cosine import CosineSimilarity
@@ -14,7 +16,7 @@ class QueryProcessor:
     def read_queries(self, static):
         queries = []
         global number, title
-        with open(self.opt['queryfile_dir'], 'r') as f:
+        with open(self.opt['query_dir'], 'r') as f:
             for line in f:
                 if 'num' in line:
                     number = line.split("Number:", 1)[1].strip()
@@ -32,6 +34,7 @@ class QueryProcessor:
 
     def static_processor(self):
         results = {}
+
         if self.opt['retrieval_model'] == 'cosine':
             results = CosineSimilarity(self.queries, self.opt).get_cosine_similarity_list()
 
@@ -43,21 +46,19 @@ class QueryProcessor:
 
         write_results(results, self.opt['result_dir'])
 
-    def dynamic_processor(self):
-        results = {}
-
-        results = LanguageModel(self.queries, self.opt, static=False).get_lm_list()
-
-        write_results(results, self.opt['result_dir'])
+    # def dynamic_processor(self):
+    #     results = LanguageModel(self.queries, self.opt, static=True, expansion=True).get_lm_list()
+    #     write_results(results, self.opt['result_dir'])
 
     def query_expander(self):
-        results = {}
 
-        results = LanguageModel(self.queries, self.opt).get_expanded_list()
+        st = time.time()
+        results = LanguageModel(self.queries, self.opt).get_lm_list()
+        write_results(results, self.opt['result_dir'])
+        en = time.time()
 
-# if __name__ == '__main__':
-#     #static
-#
-#     QueryProcessor({'qfile_dir' : 'tmp/data/queryfile.txt', 'index_type' : 'single'}).read_queries()
-#
-#     #dynamic
+        print('query expansion whole: ', en - st)
+
+    def query_threshold(self, th_val):
+        results = LanguageModel(self.queries, self.opt, expansion=False, qthreshold=True).get_th_list(th_val)
+        write_results(results, self.opt['result_dir'])

@@ -20,7 +20,7 @@ opt['index_dir'] = args[3]
 if len(args) == 5 and args[4] is not None:
     opt['memory'] = int(args[4])
 else:
-    opt['memory'] = 100000
+    opt['memory'] = 10000000
 
 if opt['index_dir'].startswith('/'):
     opt['index_dir'] = opt['index_dir'][1:]

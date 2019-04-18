@@ -1,19 +1,21 @@
 import json
+import operator
 import pickle
+import time
 from collections import defaultdict
 
 from entities.query_item import Query
-from utils.tokenizer import Tokenizer
 
 
 class RetrievalModel:
 
-    def __init__(self, queries, opt, static, expansion, sim='jaccard'):
+    def __init__(self, queries, opt, static, expansion, qthreshold, sim='jaccard'):
         """
 
         :param queries: an array of Query objects
         :param opt: options received by the system
         """
+        self.q_smooth = 0.01
         self.queries = queries
         self.opt = opt
 
@@ -28,90 +30,90 @@ class RetrievalModel:
         # returns the hits for the queries if static
         if static:
             self.hits, self.all_retrieved_docs = self.get_hits_staticly()
-        else:
-            self.phrase_idx = self.load_phrase_idx()
-            self.positional_idx = self.load_positional_idx()
-            # self.proximity_idx = self.load_proximity_idx()
-            self.hits, self.all_retrieved_docs = self.get_hits_dynamically()
+        # elif not qthreshold:
+        # self.phrase_idx = self.load_phrase_idx()
+        # self.positional_idx = self.load_positional_idx()
+        # self.proximity_idx = self.load_proximity_idx()
+        # self.hits, self.all_retrieved_docs = self.get_hits_dynamically()
 
         if expansion:
             self.doc_tokens = self.load_doc_tokens()
-            self.sim = sim
+            self.expand_queries(opt['exp_term_threshold'])
+            self.hits, self.all_retrieved_docs = self.get_hits_staticly()
 
-
-    def get_hits_dynamically(self):
-        hits = defaultdict(dict)
-
-        all_docs = {}
-        for q_obj in self.queries:
-            if 'economies' in q_obj.terms:
-                s = 0
-            docs_for_q = []
-            ngrams = Tokenizer(q_obj.title, 'single').extract_ngrams(2, True)
-            thgrams = Tokenizer(q_obj.title, 'single').extract_ngrams(3, True)
-            if len(thgrams) > 0:
-                ngrams.extend(Tokenizer(q_obj.title, 'single').extract_ngrams(3))
-            for ngram in ngrams:
-                try:
-                    q_obj_idx = self.phrase_idx[ngram]
-                    if q_obj_idx['tf_collection'] >= 5:
-                        pl_phrase = self.phrase_idx[ngram]
-                        for qterm in ngram.split():
-                            docs_for_qterm = []
-                            try:
-                                all_relevant_docs_for_qterm = [d['doc_num'] for d in
-                                                               self.inverted_index[qterm]['postings']]
-                                for doc in pl_phrase['postings']:
-                                    if doc['doc_num'] in all_relevant_docs_for_qterm:
-                                        docs_for_qterm.append(doc)
-                                qterm_entity = {}
-                                qterm_entity['term'] = qterm
-                                qterm_entity['idf'] = self.inverted_index[qterm]['idf']
-                                qterm_entity['tf_collection'] = self.inverted_index[qterm]['tf_collection']
-                                qterm_entity['postings'] = docs_for_qterm
-                                hits[q_obj.title][qterm] = qterm_entity
-                            except:
-                                pass
-
-                    else:  # do proximity index
-                        # hits = defaultdict(dict)
-                        visited = []
-                        docs_for_q = []
-                        for qterm in q_obj.terms:
-                            try:
-                                pl_qterm = self.positional_idx[qterm]
-                                hits[q_obj.title][qterm] = pl_qterm
-                                for doc in pl_qterm['postings']:
-                                    if doc['doc_num'] not in visited:
-                                        docs_for_q.append(doc)
-                                        visited.append(doc['doc_num'])
-                                if q_obj.title == 'sick building syndrome':
-                                    s = 2
-                                all_docs[q_obj.title] = docs_for_q
-                            except:
-                                continue
-
-                except:
-                    pass
-
-            # if not enough document found, then simply use single-term index
-            if len(docs_for_q) <= 5:
-                visited = []
-                docs_for_q = []
-                for qterm in q_obj.terms:
-                    try:
-                        pl_qterm = self.inverted_index[qterm]
-                    except:
-                        continue
-                    hits[q_obj.title][qterm] = pl_qterm
-                    for doc in pl_qterm['postings']:
-                        if doc['doc_num'] not in visited:
-                            docs_for_q.append(doc)
-                            visited.append(doc['doc_num'])
-                all_docs[q_obj.title] = docs_for_q
-
-
-        return hits, all_docs
+    # def get_hits_dynamically(self):
+    #     hits = defaultdict(dict)
+    #
+    #     all_docs = {}
+    #     for q_obj in self.queries:
+    #         if 'economies' in q_obj.terms:
+    #             s = 0
+    #         docs_for_q = []
+    #         ngrams = Tokenizer(q_obj.title, 'single').extract_ngrams(2, True)
+    #         thgrams = Tokenizer(q_obj.title, 'single').extract_ngrams(3, True)
+    #         if len(thgrams) > 0:
+    #             ngrams.extend(Tokenizer(q_obj.title, 'single').extract_ngrams(3))
+    #         for ngram in ngrams:
+    #             try:
+    #                 q_obj_idx = self.phrase_idx[ngram]
+    #                 if q_obj_idx['tf_collection'] >= 5:
+    #                     pl_phrase = self.phrase_idx[ngram]
+    #                     for qterm in ngram.split():
+    #                         docs_for_qterm = []
+    #                         try:
+    #                             all_relevant_docs_for_qterm = [d['doc_num'] for d in
+    #                                                            self.inverted_index[qterm]['postings']]
+    #                             for doc in pl_phrase['postings']:
+    #                                 if doc['doc_num'] in all_relevant_docs_for_qterm:
+    #                                     docs_for_qterm.append(doc)
+    #                             qterm_entity = {}
+    #                             qterm_entity['term'] = qterm
+    #                             qterm_entity['idf'] = self.inverted_index[qterm]['idf']
+    #                             qterm_entity['tf_collection'] = self.inverted_index[qterm]['tf_collection']
+    #                             qterm_entity['postings'] = docs_for_qterm
+    #                             hits[q_obj.title][qterm] = qterm_entity
+    #                         except:
+    #                             pass
+    #
+    #                 else:  # do proximity index
+    #                     # hits = defaultdict(dict)
+    #                     visited = []
+    #                     docs_for_q = []
+    #                     for qterm in q_obj.terms:
+    #                         try:
+    #                             pl_qterm = self.positional_idx[qterm]
+    #                             hits[q_obj.title][qterm] = pl_qterm
+    #                             for doc in pl_qterm['postings']:
+    #                                 if doc['doc_num'] not in visited:
+    #                                     docs_for_q.append(doc)
+    #                                     visited.append(doc['doc_num'])
+    #                             if q_obj.title == 'sick building syndrome':
+    #                                 s = 2
+    #                             all_docs[q_obj.title] = docs_for_q
+    #                         except:
+    #                             continue
+    #
+    #             except:
+    #                 pass
+    #
+    #         # if not enough document found, then simply use single-term index
+    #         if len(docs_for_q) <= 5:
+    #             visited = []
+    #             docs_for_q = []
+    #             for qterm in q_obj.terms:
+    #                 try:
+    #                     pl_qterm = self.inverted_index[qterm]
+    #                 except:
+    #                     continue
+    #                 hits[q_obj.title][qterm] = pl_qterm
+    #                 for doc in pl_qterm['postings']:
+    #                     if doc['doc_num'] not in visited:
+    #                         docs_for_q.append(doc)
+    #                         visited.append(doc['doc_num'])
+    #             all_docs[q_obj.title] = docs_for_q
+    #
+    #
+    #     return hits, all_docs
 
     # returns hits for a given query (static)
     def get_hits_staticly(self):
@@ -136,7 +138,7 @@ class RetrievalModel:
     # load inverted index into the memory
     def load_inverted_index(self):
         inverted_index = {}
-        with open(self.opt['index_dir'] + 'lexicon.dt') as lex, open(self.opt['index_dir'] + 'postings.pl') as pl:
+        with open(self.opt['index_dir'] + '-' + self.opt['index_type'] + '/lexicon.dt') as lex, open(self.opt['index_dir'] + '-' + self.opt['index_type'] + '/postings.pl') as pl:
             for x, y in zip(lex, pl):
                 x = x.strip()
                 y = y.strip()
@@ -209,4 +211,38 @@ class RetrievalModel:
         pass
 
     def load_doc_tokens(self):
-        return pickle.load( open('/tmp/dict', "rb"))
+        return pickle.load(open('tmp/dict', "rb"))
+
+    def expand_queries(self, word_th):
+        term_scores = {}
+        for i, query in enumerate(self.queries):
+            for doc in self.all_retrieved_docs[query.title]:
+                for doc_term in self.doc_tokens[doc['doc_num']]:
+
+                    start = time.time()
+                    dterm_prob = self.doc_tokens[doc['doc_num']].count(doc_term) / doc['doc_len']
+                    end1 = time.time()
+                    e1 = end1 - start
+                    # print()
+
+                    query_factor = 1
+
+                    start = time.time()
+                    for query_term in query.terms:
+                        query_factor *= (self.doc_tokens[doc['doc_num']].count(query_term) + self.q_smooth) / doc[
+                            'doc_len']
+
+                    if doc_term not in term_scores.keys():
+                        term_scores[doc_term] = dterm_prob * query_factor
+                    else:
+                        term_scores[doc_term] += dterm_prob * query_factor
+
+                    for query_term in query.terms:
+                        if query_term in term_scores.keys(): del term_scores[query_term]
+
+                    if len(term_scores) > 5000:
+                        break
+            expanded_terms_query = sorted(term_scores.items(), key=operator.itemgetter(1), reverse=True)[:word_th]
+            expanded_terms = [e[0] for e in expanded_terms_query]
+            self.queries[i] = Query(query.title + ' ' + ' '.join(expanded_terms),
+                                    query.number, query.terms + expanded_terms)

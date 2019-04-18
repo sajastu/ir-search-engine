@@ -14,8 +14,8 @@ def get_dot_product(v1, v2):
 
 class CosineSimilarity(RetrievalModel):
 
-    def __init__(self, queries, opt, static=True):
-        super().__init__(queries, opt, static)
+    def __init__(self, queries, opt, static=True, expansion=True, qthreshold=False):
+        super().__init__(queries, opt, static=True, expansion=True, qthreshold=False)
 
     def form_query_vector(self, q):
         q_vector = []

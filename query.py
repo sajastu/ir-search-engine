@@ -6,24 +6,33 @@ import time
 from inverted_index import Index
 from query_processor import QueryProcessor
 
+
+
 parser = argparse.ArgumentParser()
 
-args = sys.argv  # argument array
+parser.add_argument('--expansion', action='store_true', help='query expansion')
+parser.add_argument('--threshold', action='store_true', help='query thresholding.')
+parser.add_argument('--position_threshold', action='store_true', help='query thresholding.')
+parser.add_argument('--goodness_threshold', action='store_true', help='query thresholding.')
+parser.add_argument('--index_dir', default='', help='Name of training file.')
+parser.add_argument('--query_dir', default='', help='Name of training file.')
+parser.add_argument('--result_dir', default='', help='Name of training file.')
+parser.add_argument('--retrieval_model', default='', help='Name of training file.')
+parser.add_argument('--index_type', default='', help='Name of training file.')
+parser.add_argument('--threshold_value', type=int, default=10, help='')
+parser.add_argument('--exp_term_threshold', type=int, default=1, help='')
 
-opt = {}
-opt['index_dir'] = args[1]
-opt['queryfile_dir'] = args[2]
-opt['retrieval_model'] = args[3]
-opt['index_type'] = args[4]
-opt['result_dir'] = args[5]
+
+args = parser.parse_args()
+opt = vars(args)
 
 
 if opt['index_dir'].startswith('/'):
     opt['index_dir'] = opt['index_dir'][1:]
 if opt['result_dir'].startswith('/'):
     opt['result_dir'] = opt['result_dir'][1:]
-if opt['queryfile_dir'].startswith('/'):
-    opt['queryfile_dir'] = opt['queryfile_dir'][1:]
+if opt['query_dir'].startswith('/'):
+    opt['query_dir'] = opt['queryfile_dir'][1:]
 
 
 def manage_directories():
@@ -52,7 +61,11 @@ if __name__ == '__main__':
     ensure_settings()
     start_time = time.time()
 
-    QueryProcessor(opt).static_processor()
+    if opt['expansion']:
+        QueryProcessor(opt).static_processor()
+
+    if opt['threshold']:
+        QueryProcessor(opt).que()
 
     elapsed_time = time.time() - start_time
 
