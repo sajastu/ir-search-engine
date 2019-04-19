@@ -6,8 +6,8 @@ from models.retrieval_model import RetrievalModel
 
 class BM25(RetrievalModel):
 
-    def __init__(self, queries, opt, static=True):
-        super().__init__(queries, opt, static)
+    def __init__(self, queries, opt):
+        super().__init__(queries, opt)
         self.queries = queries
         self.k1 = 1.2
         self.k2 = 500
