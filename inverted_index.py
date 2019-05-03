@@ -6,6 +6,7 @@ from collections import deque
 
 from utils import index_utils as utils
 from entities.posting_item import PostingItem
+from utils.index_utils import write_doc_to_file
 from utils.parse_utils import parse_document
 
 
@@ -217,6 +218,7 @@ class Index:
 
     def read_unlimited(self):
         data = []
+        docs_with_tokens = {}
         flag = False
         j = 0
         for file in self.files:
@@ -232,6 +234,7 @@ class Index:
                         flag = False
                         doc_num, tokens, token_positions, doc_len = parse_document(' '.join(data).replace('\n', ''),
                                                                           self.opt['type'])
+                        docs_with_tokens[doc_num] = tokens
                         data.clear()
                         for i, token in enumerate(tokens):
                             if len(token_positions) == 0:
@@ -242,9 +245,12 @@ class Index:
                                                                             enumerate(tokens) if x == token], doc_length=doc_len)))
 
                     line = f.readline()
+        dir = self.out_dir[:-1] + '-' + self.opt['type'] + '/'
+        if not os.path.exists(dir):
+            os.mkdir(dir)
 
-        block_posting_filename = open(self.out_dir + 'postings.pl', 'w')
-        block_dict = open(self.out_dir + 'lexicon.dt', 'w')
+        block_posting_filename = open(self.out_dir[:-1] + '-' + self.opt['type'] + '/postings.pl', 'w')
+        block_dict = open(self.out_dir[:-1] + '-' + self.opt['type'] + '/lexicon.dt', 'w')
 
         self.term_doc_list = list(self.term_doc_list)
 
@@ -263,7 +269,7 @@ class Index:
                     postinglist[term].append(pi)
 
         print('Writing the posting list')
-
+        write_doc_to_file(docs_with_tokens, 'dict')
         terms = {t: postinglist[t] for t in sorted(postinglist.keys())}
         for term in terms:
             postinglist[term].sort(key=lambda x: x.doc_num, reverse=False)

@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6539ac88-82b8-4be1-acd9-eb1cf1fa04bf" name="Default Changelist" comment="query expansion completed">
+    <list default="true" id="6539ac88-82b8-4be1-acd9-eb1cf1fa04bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940104.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940104.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940128.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940303.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940405.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940525.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940617.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940810.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr940810.2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr941006.1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/Mini-Trec/big/fr941206.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inverted_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/inverted_index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/bm25.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/bm25.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/cosine.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/cosine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/lm.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/lm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/retrieval_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/retrieval_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query_expansion.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/query_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/query_processor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,17 +29,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/irsearch_engine$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1549419147333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$bm25.coverage" NAME="bm25 Coverage Results" MODIFIED="1553293298899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/irsearch_engine$query_reader.coverage" NAME="query_reader Coverage Results" MODIFIED="1553199221382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$query_dynamic.coverage" NAME="query_dynamic Coverage Results" MODIFIED="1553549705252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$run.coverage" NAME="build Coverage Results" MODIFIED="1550308152169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine_P3$query.coverage" NAME="query Coverage Results" MODIFIED="1556857308315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$test.coverage" NAME="test Coverage Results" MODIFIED="1550373410897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1550363324683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$retrieval_model.coverage" NAME="retrieval_model Coverage Results" MODIFIED="1552840635602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$query.coverage" NAME="query Coverage Results" MODIFIED="1555560206916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/irsearch_engine$index_utils.coverage" NAME="index_utils Coverage Results" MODIFIED="1550369206114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine_P3$build.coverage" NAME="build Coverage Results" MODIFIED="1556856534947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1550388268063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1549419147333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$query_dynamic.coverage" NAME="query_dynamic Coverage Results" MODIFIED="1553549705252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$run.coverage" NAME="build Coverage Results" MODIFIED="1550308152169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$retrieval_model.coverage" NAME="retrieval_model Coverage Results" MODIFIED="1552840635602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$query.coverage" NAME="query Coverage Results" MODIFIED="1555685907272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/irsearch_engine$index_utils.coverage" NAME="index_utils Coverage Results" MODIFIED="1550369206114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/irsearch_engine$build.coverage" NAME="build Coverage Results" MODIFIED="1555555253424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -49,62 +61,82 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="150" />
+          <entry key="PLAIN_TEXT" value="154" />
           <entry key="Perl" value="61" />
-          <entry key="Python" value="233" />
-          <entry key="PythonStub" value="1" />
+          <entry key="Python" value="243" />
+          <entry key="PythonStub" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="381" />
-          <entry key="Python" value="28889" />
+          <entry key="Python" value="31161" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1896577522">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Perl" value="5" />
+          <entry key="Python" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="76" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/retrieval_model.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/inverted_index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="99">
+              <caret line="249" selection-start-line="249" selection-end-line="249" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="37" selection-start-line="37" selection-end-line="38" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/index_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/query.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/lm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+            <state relative-caret-position="214">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/query_processor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,9 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dct</find>
-      <find>with</find>
-      <find>2014</find>
       <find>2016</find>
       <find>set_p</find>
       <find>index_uti</find>
@@ -151,6 +180,9 @@
       <find>tokens</find>
       <find>FR940617-2-00227</find>
       <find>first</find>
+      <find>dict</find>
+      <find>load</find>
+      <find>collectio</find>
     </findStrings>
     <replaceStrings>
       <replace>print(</replace>
@@ -189,20 +221,21 @@
         <option value="$PROJECT_DIR$/entities/query_item.py" />
         <option value="$PROJECT_DIR$/utils/text_utils.py" />
         <option value="$PROJECT_DIR$/query_dynamic.py" />
-        <option value="$PROJECT_DIR$/models/bm25.py" />
         <option value="$PROJECT_DIR$/utils/tokenizer.py" />
         <option value="$PROJECT_DIR$/utils/index_utils.py" />
         <option value="$PROJECT_DIR$/utils/parse_utils.py" />
         <option value="$PROJECT_DIR$/query_expansion.py" />
-        <option value="$PROJECT_DIR$/inverted_index.py" />
         <option value="$PROJECT_DIR$/result/results_exp.txt" />
         <option value="$PROJECT_DIR$/result/results.txt" />
         <option value="$PROJECT_DIR$/build.py" />
-        <option value="$PROJECT_DIR$/query.py" />
-        <option value="$PROJECT_DIR$/models/lm.py" />
         <option value="$PROJECT_DIR$/models/cosine.py" />
+        <option value="$PROJECT_DIR$/models/lm.py" />
+        <option value="$PROJECT_DIR$/models/bm25.py" />
+        <option value="$PROJECT_DIR$/models/test.py" />
         <option value="$PROJECT_DIR$/query_processor.py" />
         <option value="$PROJECT_DIR$/models/retrieval_model.py" />
+        <option value="$PROJECT_DIR$/query.py" />
+        <option value="$PROJECT_DIR$/inverted_index.py" />
       </list>
     </option>
   </component>
@@ -213,7 +246,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="y" value="203" />
     <option name="width" value="1440" />
     <option name="height" value="822" />
   </component>
@@ -228,27 +261,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
+              <item name="irsearch_engine_P3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="irsearch_engine_P3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
+              <item name="irsearch_engine_P3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="irsearch_engine_P3" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="irsearch_engine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="irsearch_engine" type="462c0819:PsiDirectoryNode" />
+              <item name="irsearch_engine_P3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="irsearch_engine_P3" type="462c0819:PsiDirectoryNode" />
               <item name="tmp" type="462c0819:PsiDirectoryNode" />
               <item name="my-indexes-single" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -259,23 +282,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="lm&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/lm.py&#10;build&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/build.py&#10;inver&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/inverted_index.py&#10;indve&#9;null&#9;null&#10;indexu&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/index_utils.py&#10;utils&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/index_utils.py&#10;bm2&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/bm25.py&#10;pr&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/query_processor.py&#10;index&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/index_utils.py&#10;quer&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/query.py&#10;retr&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/retrieval_model.py&#10;token&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;toke&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;bui&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/build.py&#10;queryfile&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/tmp/data/queryfile.txt&#10;que&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/query.py&#10;query_re&#9;RUN_CONFIGURATION&#9;query_reader&#10;cosine&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/cosine.py&#10;item&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/entities/posting_item.py&#10;rp&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/regex_patterns.py&#10;Token&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;run&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/run_me.py&#10;postin&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/entities/posting_item.py" />
+    <property name="SearchEverywhereHistoryKey" value="que&#9;FILE&#9;file:///Users/ss4164/Desktop/irsearch_engine_P3/query.py&#10;inver&#9;null&#9;null&#10;utils&#9;FILE&#9;file:///Users/ss4164/Desktop/irsearch_engine_P3/utils/index_utils.py&#10;قثف&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/retrieval_model.py&#10;lm&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/lm.py&#10;build&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/build.py&#10;indve&#9;null&#9;null&#10;indexu&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/index_utils.py&#10;bm2&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/bm25.py&#10;pr&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/query_processor.py&#10;index&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/index_utils.py&#10;quer&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/query.py&#10;retr&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/retrieval_model.py&#10;token&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;toke&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;bui&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/build.py&#10;queryfile&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/tmp/data/queryfile.txt&#10;query_re&#9;RUN_CONFIGURATION&#9;query_reader&#10;cosine&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/models/cosine.py&#10;item&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/entities/posting_item.py&#10;rp&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/regex_patterns.py&#10;Token&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/utils/tokenizer.py&#10;run&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/run_me.py&#10;postin&#9;FILE&#9;file:///Users/ss4164/PycharmProjects/irsearch_engine/entities/posting_item.py" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tmp/data" />
-      <recent name="$PROJECT_DIR$/raw_data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tmp/Mini-Trec/big" />
+      <recent name="$PROJECT_DIR$/tmp/Mini-Trec/BigSample" />
       <recent name="$PROJECT_DIR$/tmp/my-indexes" />
       <recent name="$PROJECT_DIR$/tmp/Mini-Trec" />
       <recent name="$PROJECT_DIR$/tmp" />
-      <recent name="$PROJECT_DIR$/models" />
-      <recent name="$PROJECT_DIR$/tmp/Mini-Trec/BigSample" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tmp/data" />
+      <recent name="$PROJECT_DIR$/raw_data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,7 +351,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build.py" />
-      <option name="PARAMETERS" value="/tmp/Mini-Trec/BigSample/ single /tmp/my-indexes/ --threshold" />
+      <option name="PARAMETERS" value="/tmp/Mini-Trec/big/ single /tmp/my-indexes/" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -349,7 +373,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/query.py" />
-      <option name="PARAMETERS" value="--index_dir tmp/my-indexes --query_dir tmp/data/queryfile.txt --retrieval_model cosine --index_type single --result_dir /result/results_exp.txt --expansion --exp_term_threshold 1" />
+      <option name="PARAMETERS" value="--index_dir tmp/my-indexes --query_dir tmp/data/queryfile.txt --retrieval_model lm --index_type single --result_dir /result/results_exp.txt --threshold --threshold_value 0 --position_threshold" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -443,20 +467,26 @@
       <option name="project" value="LOCAL" />
       <updated>1555472398248</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="query expansion completed">
+      <created>1555561798451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555561798451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21387696" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16094421" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32465753" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.31232876" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.55479455" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.5273973" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3068493" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -464,7 +494,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005325" side_tool="true" weight="0.15824176" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946752" visible="true" weight="0.13561644" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946752" weight="0.27945206" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -486,7 +516,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jaccard similarity measure added.&#10;--minor bug in index creation time" />
     <MESSAGE value="resolved bug in indexing" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolved bug in indexing" />
+    <MESSAGE value="query expansion completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="query expansion completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -498,12 +529,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>143</line>
+          <line>144</line>
           <option name="timeStamp" value="355" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="357" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -517,109 +548,49 @@
           <option name="timeStamp" value="481" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/query_processor.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="483" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/bm25.py</url>
           <line>26</line>
           <option name="timeStamp" value="542" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/models/retrieval_model.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="548" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>270</line>
-          <option name="timeStamp" value="550" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/index_utils.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="551" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/utils/index_utils.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="552" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>263</line>
-          <option name="timeStamp" value="555" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>252</line>
-          <option name="timeStamp" value="556" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>257</line>
-          <option name="timeStamp" value="557" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>260</line>
-          <option name="timeStamp" value="559" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>255</line>
-          <option name="timeStamp" value="560" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>262</line>
-          <option name="timeStamp" value="561" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>259</line>
-          <option name="timeStamp" value="562" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>254</line>
-          <option name="timeStamp" value="563" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inverted_index.py</url>
-          <line>232</line>
-          <option name="timeStamp" value="564" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/lm.py</url>
-          <line>75</line>
+          <line>74</line>
           <option name="timeStamp" value="592" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/lm.py</url>
-          <line>69</line>
+          <line>68</line>
           <option name="timeStamp" value="594" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/retrieval_model.py</url>
-          <line>169</line>
+          <line>92</line>
           <option name="timeStamp" value="602" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/models/retrieval_model.py</url>
-          <line>41</line>
+          <line>37</line>
           <option name="timeStamp" value="613" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/build.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="617" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/build.py</url>
           <line>20</line>
           <option name="timeStamp" value="618" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/retrieval_model.py</url>
+          <line>177</line>
+          <option name="timeStamp" value="675" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="677" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/inverted_index.py</url>
+          <line>252</line>
+          <option name="timeStamp" value="679" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -634,6 +605,12 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
       <expression>
+        <expression-string>assert opt['threshold']==True and opt['expansion']==True, \
+    &quot;Thresholding and Expansion cannot be applied simultaneously!!&quot;</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string># arrayToBytes([term_id, postings_file.tell(), len(postings), posting_count])
 postings_file.tell()</expression-string>
         <language-id>Python</language-id>
@@ -642,37 +619,17 @@ postings_file.tell()</expression-string>
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>opt</expression-string>
+        <expression-string>self.opt['data_dir']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>parser.parse_args()</expression-string>
+        <expression-string>query.terms[:should_remain]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>args.threshold</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>args</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.queries</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>query.terms + expanded_terms</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>query.terms.ap</expression-string>
+        <expression-string>query.terms[:should_removed]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -682,14 +639,33 @@ postings_file.tell()</expression-string>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>query.terms.extend('')</expression-string>
+        <expression-string>idf_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>term_list</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>term_list[idx]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>int(round(len(query.terms) * ((bound / 100.0))))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>d</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr941206.1" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/math.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -723,20 +699,8 @@ postings_file.tell()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../elasticsearch-demo-1/results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84990">
-          <caret line="5666" selection-start-line="5666" selection-end-line="5666" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../elasticsearch-demo-1/data/queries.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="320" lean-forward="true" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../elasticsearch-demo-1/results.txt" />
+    <entry file="file://$PROJECT_DIR$/../elasticsearch-demo-1/data/queries.txt" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-2005133601/_collections.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -744,7 +708,6 @@ postings_file.tell()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/data/queryfile.txt" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-2005133601/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -776,43 +739,6 @@ postings_file.tell()</expression-string>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-2005133601/sys.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940104.0">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940128.2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr941006.1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940810.2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940810.0">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940617.2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940525.0">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940405.1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940303.1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/BigSample/fr940104.2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/index_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/query_expansion.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/nltk/sem/logic.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -825,9 +751,6 @@ postings_file.tell()</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="47" selection-start-line="47" selection-end-line="57" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,34 +761,136 @@ postings_file.tell()</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/my-indexes/postings.pl">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="75">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="43" />
+    <entry file="file://$PROJECT_DIR$/result/results.txt" />
+    <entry file="file://$PROJECT_DIR$/models/cosine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/lm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/copy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/results_exp.txt" />
+    <entry file="file://$PROJECT_DIR$/models/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/data/queryfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_processor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/bm25.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/retrieval_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2221">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr941006.1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940810.2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940810.0">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940617.2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940525.0">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940405.1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940303.1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940128.2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940104.2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/Mini-Trec/big/fr940104.0">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tmp/my-indexes/lexicon.dt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="-670910" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp/my-indexes/postings.pl">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/index_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/results.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/query.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inverted_index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="229" column="41" selection-start-line="229" selection-start-column="41" selection-end-line="229" selection-end-column="41" />
+        <state relative-caret-position="152">
+          <caret line="37" selection-start-line="37" selection-end-line="38" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -875,64 +900,13 @@ postings_file.tell()</expression-string>
     <entry file="file://$PROJECT_DIR$/tmp/my-indexes-single/postings.pl">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/result/results_exp.txt">
+    <entry file="file://$PROJECT_DIR$/inverted_index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="5655" column="28" lean-forward="true" selection-start-line="5655" selection-start-column="28" selection-end-line="5655" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/bm25.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="59" />
+        <state relative-caret-position="99">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/cosine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/lm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_processor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/retrieval_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
