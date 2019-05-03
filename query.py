@@ -19,13 +19,21 @@ parser.add_argument('--query_dir', default='', help='Name of training file.')
 parser.add_argument('--result_dir', default='', help='Name of training file.')
 parser.add_argument('--retrieval_model', default='', help='Name of training file.')
 parser.add_argument('--index_type', default='', help='Name of training file.')
-parser.add_argument('--threshold_value', type=int, default=10, help='')
-parser.add_argument('--exp_term_threshold', type=int, default=1, help='')
+parser.add_argument('--threshold_value', type=int, default=0, help='')
+parser.add_argument('--exp_term_threshold', required='--expansion' in sys.argv, type=int, default=0, help='')
 
 
 args = parser.parse_args()
+
+if args.threshold:
+    args.expansion = False
+elif args.expansion:
+    args.threshold = False
+
 opt = vars(args)
 
+if not opt['position_threshold'] and not opt['goodness_threshold']:
+    opt['position_threshold'] = True
 
 if opt['index_dir'].startswith('/'):
     opt['index_dir'] = opt['index_dir'][1:]
@@ -61,12 +69,7 @@ if __name__ == '__main__':
     ensure_settings()
     start_time = time.time()
 
-    if opt['expansion']:
-        QueryProcessor(opt).static_processor()
-
-    if opt['threshold']:
-        QueryProcessor(opt).que()
-
+    QueryProcessor(opt).static_processor()
     elapsed_time = time.time() - start_time
 
     print('Whole time: {:.2f}'.format(elapsed_time))

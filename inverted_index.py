@@ -8,7 +8,7 @@ from utils import index_utils as utils
 from entities.posting_item import PostingItem
 from utils.index_utils import write_doc_to_file
 from utils.parse_utils import parse_document
-
+#forcommi
 
 class Index:
     def __init__(self, opt):

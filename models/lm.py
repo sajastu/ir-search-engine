@@ -18,10 +18,9 @@ def merge_lists(init_docs, et_doc_scores):
 
 
 class LanguageModel(RetrievalModel):
-    def __init__(self, queries, opt, mu=0.5, static=True, expansion=True, qthreshold=False):
-        super().__init__(queries, opt, static, expansion, qthreshold)
+    def __init__(self, queries, opt, mu=0.5):
+        super().__init__(queries, opt)
         self.mu = mu
-        self.expansion = expansion
 
     def get_lm_list(self):
         ranked_list = {}
@@ -95,8 +94,3 @@ class LanguageModel(RetrievalModel):
     #     intersection = len(list(set(t1_docs) & set(t2_docs)))
     #     union = len(set.union(*[set(t1_docs), set(t1_docs)]))
     #     return intersection / float(union)
-
-
-def number_match(string):
-    pattern = re.compile("^[^0-9]+$")
-    return pattern.match(string)
